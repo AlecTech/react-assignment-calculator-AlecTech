@@ -11,7 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
 
 
-    <Calculator heading="Welcome to my Calculator!" input1="Input 1:" input2="Input 2:"/>
+    <Calculator heading="Welcome to my Calculator!" input1="Input 1:" input2="Input 2:" result/>
     {/* <Calculator  heading="Welcome to my Calculator!"/>
     <Calculator  input="Input 1:"/> 
     <input type='text' class='field' />

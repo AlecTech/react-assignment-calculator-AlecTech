@@ -6,31 +6,43 @@ import React from 'react';
 function Calculator (props)
 { // Every component should return JSX.
  
+
+
+
+
+
+
+
   let heading = props.heading;
   let input1 = props.input1;
   let input2 = props.input2;
+  let oper = props.oper;
+  let result = props.result;
   //let empty = props.empty;
  
   return (
     <div>
       <h1> { heading } </h1>
       <h2> { input1 } </h2>
-      <input type='text' class='field' />
+      <input type="number" min="0" step="1" class='field' />
       <h2>Operator</h2>
       <select class='where' >
          <option></option>
          <option value='add'>+</option>
          <option value='subtract'>-</option>
-         <option value='divid'>/</option>
+         <option value='divide'>/</option>
          <option value='multiply'>*</option>
       </select>
       <h2> {input2}</h2>
-      <input type='text' class='field' />
+      <input type="number" min="0" step="1" class='field' />
       <h2></h2>
       <input type='submit' class='submitBtn success' value='Submit'/>
+      <h3>RESULT: {result} </h3>
     </div>
   );
 }
+export default Calculator
+
 // const Calculator = props => {
 //   return (
 //     <div>
@@ -53,5 +65,3 @@ function Calculator (props)
       
 //   );
 // }
-
-export default Calculator 
