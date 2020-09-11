@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // We can try a fat arrow function as well (let's try to be consistent in the real world though!)
 // If the component accepts a parameter, this is referred to as a "prop."
 // Props allow us to pass values INTO our components from a parent document / component.
 function Calculator (props)
 { // Every component should return JSX.
- 
+  const [new1Num, setNew1Num] = useState('0');
+  const [new2Num, setNew2Num] = useState('0');
 
 
 
@@ -24,9 +25,13 @@ function Calculator (props)
     <div>
       <h1> { heading } </h1>
       <h2> { input1 } </h2>
-      <input type="number" min="0" step="1" class='field' />
+      <input 
+      type="number" min="0" step="1" 
+      onChange={e => { setNew1Num( e.target.value ) }}
+      value={new1Num}
+      class='field' />
       <h2>Operator</h2>
-      <select class='where' >
+      <select class='operator' >
          <option></option>
          <option value='add'>+</option>
          <option value='subtract'>-</option>
@@ -34,10 +39,14 @@ function Calculator (props)
          <option value='multiply'>*</option>
       </select>
       <h2> {input2}</h2>
-      <input type="number" min="0" step="1" class='field' />
+      <input 
+      type="number" min="0" step="1" 
+      onChange={e => { setNew2Num( e.target.value ) }}
+      value={new2Num}
+      class='field' />
       <h2></h2>
       <input type='submit' class='submitBtn success' value='Submit'/>
-      <h3>RESULT: {result} </h3>
+      <h3>RESULT: {new1Num} + {new2Num} {result} </h3>
     </div>
   );
 }
