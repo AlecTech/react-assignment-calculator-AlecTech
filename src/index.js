@@ -12,20 +12,7 @@ ReactDOM.render(
 
 
     <Calculator heading="Welcome to my Calculator!" input1="Input 1:" input2="Input 2:" result/>
-    {/* <Calculator  heading="Welcome to my Calculator!"/>
-    <Calculator  input="Input 1:"/> 
-    <input type='text' class='field' />
-    <Calculator input="Operators"/>
-    <select class='where' >
-      <option value='add'>+</option>
-      <option value='subtract'>-</option>
-      <option value='divid'>/</option>
-      <option value='multiply'>*</option>
-    </select>
-    <Calculator  input="Input 2:"/>
-    <input type='text' class='field' />
-    <Calculator empty="" />
-    <input type='submit' class='submitBtn success' value='Submit'/> */}
+    
    
   </React.StrictMode>,
   document.getElementById('root')
