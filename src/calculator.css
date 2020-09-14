@@ -16,4 +16,24 @@ div .submitBtn {
     background-color: #4CAF50;
     color: white;
   }
+
+  h3 {
+    display: flex;
+    background-color: #4CAF50;
+    border: brown;
+    border-style: groove;
+    border-radius: 5%;
+    padding: 1rem;
+    width: 40%;
+    justify-content: space-around;
+
+  }
+  h3 span{
+    display: flex;
+    /* background-color: rgb(236, 181, 181); */
+    border: brown;
+    border-style: groove;
+    border-radius: 20%;
+    color: rgb(21, 91, 124);
+  }
   

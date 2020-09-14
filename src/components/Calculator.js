@@ -29,16 +29,18 @@ function Calculator (props)
     else if (newOper == 'subtract'){
       result = a - b;
     }
-    else if (newOper == 'divide' && b !=0){
+    else if (newOper == 'divide' && b != 0){
       result = a / b;
     }
     else if (newOper == 'multiply'){
       result = a * b;
     }
+    else if (b == 0) {
+      result = "Can not divide by Zero!"
+    }
     setNewAnsw(result);
   }
   
-
   let heading = props.heading;
   let input1 = props.input1;
   let input2 = props.input2;
@@ -50,7 +52,7 @@ function Calculator (props)
       <form onSubmit = {onFormSubmit}> 
       <h2> { input1 } </h2>
       <input 
-      type="number" min="0" step="1" 
+      type="number" 
       onChange={e => { setNew1Num( e.target.value ) }}
       value={new1Num}
       className='field' />
@@ -68,17 +70,17 @@ function Calculator (props)
         </select>
         <h2> {input2}</h2>
         <input 
-      type="number" min="0" step="1" 
+      type="number" 
       onChange={e => { setNew2Num( e.target.value ) }}
       value={new2Num}
       className='field' />
       <h2></h2>
       <input type='submit' className='submitBtn success' value='Submit'/>
-      <h3>RESULT: 
-        {new1Num} 
-        {newOper} 
-        {new2Num} 
-        {result} 
+      <h3 className="output">RESULT: 
+        <span> {new1Num} </span> 
+        <span> {newOper}</span> 
+        <span> {new2Num}</span> 
+        <span> = {result} </span>
       </h3>
       </form>
     </div>
